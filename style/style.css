@@ -3,11 +3,19 @@
 	color: #ffffff;
 	margin: 0 0 100px;
 }
-
+/*imagenes dentro del carrusel */
 .img_div{
 	height: 75vh !important;
 	width: 75vh !important;
 }
 img{
 	background-repeat: no-repeat;
+}
+.form-flex{
+	display: flex;
+	justify-content: center;
+}
+.btn-success{
+	background-color: #2e402e;
+	border-color: #0eff0e;
 }
