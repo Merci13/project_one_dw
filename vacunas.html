@@ -10,6 +10,7 @@
 		<link rel="stylesheet" type="text/css" href="style/style.css">
 		
 	</head>
+
 	<body>
 		<!--Menu que colapsa a la medida de mediano y pequeño -->
 		<div class="container">
@@ -23,15 +24,24 @@
 							<span class="icon-bar"></span>
 							</button>
 							<a class="navbar-brand" href="index.html">VacAdmin</a>
+							
 						</div>
+						
 						<div class="collapse navbar-collapse" id="myNavbar">
 							
 							<ul class="nav navbar-nav navbar-right">
-								<li><a href="sing_up.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-								<li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-								
-								<li><a href="home_administrador.html"><span class="glyphicon glyphicon-leaf"></span> Ir a</a></li>
-								<li><a href="home_colaborador.html"><span class="glyphicon glyphicon-leaf"></span> Ir c</a></li>
+								<li><a href="logout.html"><span class="glyphicon glyphicon-log-out"></span> log out</a></li>
+								<li><a href="home.html"><span class="glyphicon glyphicon-cog"></span> </a></li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a href="#">Action</a></li>
+										<li><a href="#">Another action</a></li>
+										<li><a href="#">Something else here</a></li>
+										<li role="separator" class="divider"></li>
+										<li><a href="#">Separated link</a></li>
+									</ul>
+								</li>
 							</ul>
 						</div>
 					</div>
@@ -39,31 +49,35 @@
 			</div>
 			
 		</div>
-			<div class="container">
+		<div class="container">
 			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-flex">
-					<form>
-						<div class="form-group">
-							<label for="name">Name or Nick Name</label>
-							<input type="text" class="form-control required" id="email-direction" aria-describedby="emailHelp" placeholder="@ Name or Nick Name" required="required">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th>Por empezar</th>
+								<th>Aplicado</th>
+								<th>En observacion</th>
+								<th>Alguna reaccion</th>
+								<th>listo</th>
+
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><button class="btn btn-default">Vaca #32342</button></button></td>
+								
+							</tr>
 							
-						</div>
-						
-						<div class="form-group">
-							<label for="contraseña">Contraseña</label>
-							<input type="password" class="form-control required" id="contraseña" aria-describedby="emailHelp" placeholder="Contraseña">
-							
-						</div>
-						
-						<button type="submit" class="btn btn-success" id="btn-submit">Log In</button>
-					</form>
+						</tbody>
+					</table>
+					<button class="btn btn-default" draga><a href="list-cows.html">Agregar Vaca</a></button>
 				</div>
-				
 				
 			</div>
 			
 		</div>
-	</body>
+		
 	<script type="text/javascript" src="bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/js/jquery-3.2.1.js" ></script>
 	<script type="text/javascript" src="bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 </html>
