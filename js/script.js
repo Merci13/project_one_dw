@@ -4,9 +4,11 @@ var usuarios=[];
 $( document ).ready(function() {
 	var url=window.location.href;
 	var urlSplit=url.split("/");
-	var listUrl=["fulanito-a.html","home_administrador.html","home_colaborador.html","infor-patron.html","list-cows.html","list-workers.html","login.html","login.html?",
+	var listUrl=["fulanito-a.html","home_administrador.html","home_colaborador.html","infor-patron.html","list-cows.html",
+	"list-workers.html","login.html","login.html?",
 	"logout.html","sing_up.html","sing_up.html?","vacunas-colaborador.html","vacunas.html"];
 	for (var i = listUrl.length - 1; i >= 0; i--) {
+		/*If para traer los usuarios en las paginas que se ocupan*/
 		if (urlSplit[urlSplit.length-1]==listUrl[i]) {
 			usuarios=obtener_local('users');
 			break;
@@ -14,6 +16,25 @@ $( document ).ready(function() {
 	}
     
 });
+
+	function login(){
+		var nick=document.getElementById("nick").value;
+		var contraseña=document.getElementById("contraseña").value;
+		for (var i = usuarios.length - 1; i >= 0; i--) {
+			if (usuarios[i][0]==nick && usuarios[i][3]==contraseña) {
+				
+			
+				window.location="home_administrador.html"; 
+				break;
+			}
+		}
+
+	}
+	
+
+
+
+
 
 /*
 	Funcion para obtener tados de local storage a partir de una key
