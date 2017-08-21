@@ -11,6 +11,14 @@ $( document ).ready(function() {
 		/*If para traer los usuarios en las paginas que se ocupan*/
 		if (urlSplit[urlSplit.length-1]==listUrl[i]) {
 			usuarios=obtener_local('users');
+			/*for para saber si ya hay un usuario logeado*/
+			for (var i = usuarios.length - 1; i >= 0; i--) {
+				if ( usuarios[i][usuarios.length-1]=="login") {
+					window.location.replace("home_administrador.html");
+					break;
+				}
+				
+			}
 			break;
 		}
 	}
@@ -22,8 +30,21 @@ $( document ).ready(function() {
 		var contraseña=document.getElementById("contraseña").value;
 		for (var i = usuarios.length - 1; i >= 0; i--) {
 			if (usuarios[i][0]==nick && usuarios[i][3]==contraseña) {
-				
+				/*agregar identificador al usuario que se logea*/
+				var token="login";
+				usuarios[i].push(token);
+				guardar_local("users",JSON.stringify(usuarios));
+
+
+
+
+				/* el window location solo funciona en fire fox
+				*/
+
 				try	{window.location.replace("home_administrador.html");
+				
+				break;
+			}catch(e){
 				window.location="home_administrador.html" 
 				break;
 			}
@@ -31,7 +52,7 @@ $( document ).ready(function() {
 
 	}
 	
-
+}
 
 
 
