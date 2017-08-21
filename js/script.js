@@ -23,8 +23,8 @@ $( document ).ready(function() {
 		for (var i = usuarios.length - 1; i >= 0; i--) {
 			if (usuarios[i][0]==nick && usuarios[i][3]==contraseña) {
 				
-			
-				window.location="home_administrador.html"; 
+				try	{window.location.replace("home_administrador.html");
+				window.location="home_administrador.html" 
 				break;
 			}
 		}
