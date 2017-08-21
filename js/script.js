@@ -4,7 +4,7 @@ var usuarios=[];
 $( document ).ready(function() {
 	var url=window.location.href;
 	var urlSplit=url.split("/");
-	var listUrl=["fulanito-a.html","home_administrador.html","home_colaborador.html","infor-patron.html","list-cows.html","list-workers.html","login.html",
+	var listUrl=["fulanito-a.html","home_administrador.html","home_colaborador.html","infor-patron.html","list-cows.html","list-workers.html","login.html","login.html?",
 	"logout.html","sing_up.html","sing_up.html?","vacunas-colaborador.html","vacunas.html"];
 	for (var i = listUrl.length - 1; i >= 0; i--) {
 		if (urlSplit[urlSplit.length-1]==listUrl[i]) {
@@ -25,10 +25,7 @@ function obtener_local(key){
 	if (convert==null) {
 		return convert=[];
 	}else{
-		for (var i = convert.length - 1; i >= 0; i--) {
-			console.log(convert[i]);
-		}
-	
+		
 		return convert;
 	}
 	 
@@ -62,23 +59,30 @@ function nuevo_usuario(){
 	var confirmar_contraseña=document.getElementById('pass-validation').value;
 	/*recorrido de usuarios para validar que no se encuentren repetidos
 	 los nombres de usuario o correos	electronicos*/
+	var bandera=true;
+
 	for (var i = usuarios.length-1; i >= 0; i--) {
 		if (usuarios[i][0]==nombre) {
 			alert("El nombre de usuario ya existe");
 			limpiar_campos_sing_up();
+			bandera=false;
 			break;
+
 		}else if (usuarios[i][2]==email) {
 			alert("El email ya esta en uso");
 			limpiar_campos_sing_up();
+			bandera=false;
 			break
 		}
 
 
 	}
 
-	if (contraseña!=confirmar_contraseña) {
+while(bandera){
+		if (contraseña!=confirmar_contraseña) {
 			alert("Las contraseña no coinciden");
 			limpiar_campos_sing_up();
+			bandera=false;
 		}else{
 			var usuario_nuevo=[nombre,apellido,email,contraseña];
 	
@@ -86,7 +90,10 @@ function nuevo_usuario(){
 			guardar_local('users',JSON.stringify(usuarios));
 			alert("Se agrego correctamente");
 			limpiar_campos_sing_up();
+			bandera=false;
 		}
+	}
+	
 
 
 }
