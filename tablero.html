@@ -57,23 +57,47 @@
 						<thead>
 							<tr>
 								<th>Por empezar</th>
-								<th id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">Aplicado</th>
+								<th>Aplicado</th>
 								<th>En observacion</th>
 								<th>Alguna reaccion</th>
 								<th>listo</th>
 
 							</tr>
 						</thead>
-						<tbody>
-							<tr id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-								<td><button class="btn btn-default" draggable="true" ondragstart="drag(event)" id="drag1">Vaca #32342</button></td>
-							</tr>
+						<tbody id="tbody_tareas">
 
 						</tbody>
 					</table>
-					<button class="btn btn-default" draga><a href="list-cows.html">Agregar Vaca</a></button>
+					<button class="btn btn-default" data-toggle="modal"
+					data-target="#myModal"><a href="list-cows.html">Agregar Tarea</a></button>
 				</div>
 
+			</div>
+
+			<div id="myModal" class="modal fade" role="dialog">
+				<div class="modal-dialog">
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Agregar nueva tarea</h4>
+						</div>
+
+						<div class="modal-body">
+							<form>
+								<div class="form-group">
+									<label for="table_name">Nombre de la tarea</label>
+									<input type="text" class="form-control required" id="tarea_nombre" aria-describedby="emailHelp" placeholder="Nombre" required="required">
+								</div>
+								<button class="btn btn-success" onclick="crear_tareas()">Agregar</button>
+							</form>
+						</div>
+
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+						</div>
+					</div>
+				</div>
 			</div>
 
 		</div>
