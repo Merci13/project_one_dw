@@ -1,7 +1,7 @@
 .bgc-blue{
 	background-color: #20433a;
 	color: #ffffff;
-	
+
 }
 /*imagenes dentro del carrusel */
 .img_div{
@@ -72,4 +72,9 @@ img{
 }
 .pic{
 	border: 2px black solid;
+}
+
+.drop{
+	width: 170px;
+	height: 50px;
 }
