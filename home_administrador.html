@@ -8,7 +8,7 @@
 		<meta description="Vacadmin is a tool to help the administration of dairy easier">
 		<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="style/style.css">
-		
+
 	</head>
 	<body id="administrador">
 		<!--Menu que colapsa a la medida de mediano y pequeño -->
@@ -23,52 +23,82 @@
 							<span class="icon-bar"></span>
 							</button>
 							<a class="navbar-brand" href="index.html">VacAdmin</a>
-							
+
 						</div>
-						
+
 						<div class="collapse navbar-collapse" id="myNavbar">
-							
+
 							<ul class="nav navbar-nav navbar-right">
 								<li><a href="logout.html"><span class="glyphicon glyphicon-log-out"></span> log out</a></li>
 								<li><a href="home.html"><span class="glyphicon glyphicon-cog"></span> </a></li>
 								<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-								<ul class="dropdown-menu">
-									<li><a href="#">Action</a></li>
-									<li><a href="#">Another action</a></li>
-									<li><a href="#">Something else here</a></li>
-									<li role="separator" class="divider"></li>
-									<li><a href="#">Separated link</a></li>
-								</ul>
-							</li>
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a href="#">Action</a></li>
+										<li><a href="#">Another action</a></li>
+										<li><a href="#">Something else here</a></li>
+										<li role="separator" class="divider"></li>
+										<li><a href="#">Separated link</a></li>
+									</ul>
+								</li>
 							</ul>
 						</div>
 					</div>
 				</nav>
 			</div>
-			
+
 		</div>
 		<!--Dentro de este conedor van todos los accesos de todas las tablas creadas por el administrador o patrono-->
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-8 col-lg-9">
-				<ul>
-					<li><button type="button" class="btn btn-success"><a href="vacunas.html">Vacunas</a></button></li><br>
-					<li><button type="button" class="btn btn-success"><a href="">Embarazos</a></button></li><br>
-					<li><button type="button" class="btn btn-success"><a href="">Desparacitaciones</a></button></li><br>
-					
-					</ul>
-					<button type="button" class="btn btn-info">agregar otra tabla</button>
+					<div id="lista_de_tablas">
+
+						<!--<li><button type="button" class="btn btn-success"><a href="vacunas.html">Vacunas</a></button></li><br>
+						<li><button type="button" class="btn btn-success"><a href="">Embarazos</a></button></li><br>
+						<li><button type="button" class="btn btn-success"><a href="">Desparacitaciones</a></button></li><br>-->
+
+					</div>
+
+					<!-- Trigger the modal with a button -->
+					<button type="button" class="btn btn-info btn-lg"
+					data-toggle="modal" data-target="#myModal">agregar otra tabla</button>
+					<!-- Modal -->
+					<div id="myModal" class="modal fade" role="dialog">
+						<div class="modal-dialog">
+							<!-- Modal content-->
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal">&times;</button>
+									<h4 class="modal-title">Agregar nueva tabla</h4>
+								</div>
+
+								<div class="modal-body">
+									<form>
+										<div class="form-group">
+											<label for="table_name">Nombre de la tabla</label>
+											<input type="text" class="form-control required" id="table_name" aria-describedby="emailHelp" placeholder="Nombre" required="required">
+										</div>
+										<button class="btn btn-success" id="btn-submit">Agregar</button>
+									</form>
+								</div>
+
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
 					<button type="button" class="btn btn-info"><a href="list-workers.html" id="list_workers">lista de trabajadores</a></button>
 				</div>
-
 			</div>
-			
+
 		</div>
-			<div class="container">
+		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 footer">
-					
+
 					<h1> <strong>VacAdmin</strong></h1>
 					<h3> <b><i>Tu Solucion Administrativa</i></b></h3>
 					<nav class="navbar navbar-inverse nav-footer">
@@ -77,13 +107,14 @@
 							<li><a href="#">Acerca de nosotros</a></li>
 							<li><a href="#"><span class="glyphicon glyphicon-asterisk"></span></a></li>
 						</ul>
-						
+
 					</nav>
 				</div>
 			</div>
-			
+
 		</div>
 	</body>
 	<script type="text/javascript" src="bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/js/jquery-3.2.1.js" ></script>
 	<script type="text/javascript" src="bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/home_administrador.js"></script>
 </html>
