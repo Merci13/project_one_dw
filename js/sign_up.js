@@ -27,7 +27,7 @@ function nuevo_usuario() {
     var confirmar_contraseña = document.getElementById('pass-validation').value;
     /*recorrido de usuarios para validar que no se encuentren repetidos
      los nombres de usuario o correos	electronicos*/
-    var bandera = true;//bandera para la validacion de la contraseña 
+    var bandera = true;//bandera para la validacion de la contraseña
 
     for (var i = usuarios.length - 1; i >= 0; i--) {
         if (usuarios[i][0] == nombre) {
@@ -91,7 +91,7 @@ function obtener_local(key) {
 /*
 	Funcion para guardar en local storage
 	@parameters key = nombre de la llave bajo la cual se guardara en local storage
-	@parameters valor_a_guardar= valor que se guardara en local storage, 
+	@parameters valor_a_guardar= valor que se guardara en local storage,
 					   tiene que estar en formato JSON para que funcione
 */
 function guardar_local(key, valor_a_guardar) {

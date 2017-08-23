@@ -18,7 +18,7 @@ $(document).ready(function() {
 
 /**
 	funcion para validar el usuario al hacer un login
-	consulta a la lista de usuarios y al encontrar el usuario 
+	consulta a la lista de usuarios y al encontrar el usuario
 	solicitado, le agrega un token="login";
 */
 function login() {
@@ -49,14 +49,11 @@ function login() {
                     guardar_local('actual', JSON.stringify(actual));
                     //el window location solo funciona en FireFox
                     window.location.replace("home_administrador.html");
-
                     break;
                 } else {
                     alert("Usuario no registrado");
-
                 }
             }
-
     */
 
 
@@ -103,7 +100,7 @@ function obtener_local(key) {
 /*
 	Funcion para guardar en local storage
 	@parameters key = nombre de la llave bajo la cual se guardara en local storage
-	@parameters valor_a_guardar= valor que se guardara en local storage, 
+	@parameters valor_a_guardar= valor que se guardara en local storage,
 					   tiene que estar en formato JSON para que funcione
 */
 function guardar_local(key, valor_a_guardar) {

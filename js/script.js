@@ -36,7 +36,7 @@ $( "#btn_login" ).click(function() {
 
 /**
 	funcion para validar el usuario al hacer un login
-	consulta a la lista de usuarios y al encontrar el usuario 
+	consulta a la lista de usuarios y al encontrar el usuario
 	solicitado, le agrega un token="login";
 */
 function login() {
@@ -83,7 +83,7 @@ function obtener_local(key) {
 /*
 	Funcion para guardar en local storage
 	@parameters key = nombre de la llave bajo la cual se guardara en local storage
-	@parameters valor_a_guardar= valor que se guardara en local storage, 
+	@parameters valor_a_guardar= valor que se guardara en local storage,
 					   tiene que estar en formato JSON para que funcione
 */
 function guardar_local(key, valor_a_guardar) {
@@ -157,10 +157,8 @@ function limpiar_campos_sing_up() {
 }
 
 /**function crear_nueva_tabla(){
-	
+
 	var nombre_tabla=document.getElementById('table_name').value;
-
-
 	var div = document.getElementById('lista_de_tablas');
 	div.innerHTML += '<a type="button" class="btn btn-success" href="https://www.youtube.com/">'+nombre_tabla+'</a>';
 }**/

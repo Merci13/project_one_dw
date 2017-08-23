@@ -8,7 +8,7 @@
 		<meta description="Vacadmin is a tool to help the administration of dairy easier">
 		<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="style/style.css">
-		
+
 	</head>
 
 	<body>
@@ -24,11 +24,11 @@
 							<span class="icon-bar"></span>
 							</button>
 							<a class="navbar-brand" href="index.html">VacAdmin</a>
-							
+
 						</div>
-						
+
 						<div class="collapse navbar-collapse" id="myNavbar">
-							
+
 							<ul class="nav navbar-nav navbar-right">
 								<li><a href="logout.html"><span class="glyphicon glyphicon-log-out"></span> log out</a></li>
 								<li><a href="home.html"><span class="glyphicon glyphicon-cog"></span> </a></li>
@@ -47,16 +47,17 @@
 					</div>
 				</nav>
 			</div>
-			
+
 		</div>
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<h1 id="tablero"></h1>
 					<table class="table table-striped">
 						<thead>
 							<tr>
 								<th>Por empezar</th>
-								<th>Aplicado</th>
+								<th id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">Aplicado</th>
 								<th>En observacion</th>
 								<th>Alguna reaccion</th>
 								<th>listo</th>
@@ -64,22 +65,20 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<td><button class="btn btn-default">Vaca #32342</button></button></td>
-								
+							<tr id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+								<td><button class="btn btn-default" draggable="true" ondragstart="drag(event)" id="drag1">Vaca #32342</button></td>
 							</tr>
-							
+
 						</tbody>
 					</table>
 					<button class="btn btn-default" draga><a href="list-cows.html">Agregar Vaca</a></button>
 				</div>
-				
+
 			</div>
-			
+
 		</div>
-		
+
 	<script type="text/javascript" src="bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/js/jquery-3.2.1.js" ></script>
 	<script type="text/javascript" src="bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/script.js"></script>
-
+	<script type="text/javascript" src="js/tablero.js"></script>
 </html>
